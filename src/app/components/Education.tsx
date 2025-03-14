@@ -37,16 +37,13 @@ const Education = () => {
               <tr>
                 <th>S/N</th>
                 <th>
-                  <p>Name of</p>
-                  <p>Examination</p>
+                  Name of examination
                 </th>
                 <th>
-                  <p>Subject or</p>
-                  <p>Department</p>
+                  Subject or Department
                 </th>
                 <th>
-                  <p>Board or</p>
-                  <p>Institute</p>
+                  Board or Institute
                 </th>
                 <th>Result</th>
                 <th>Passing Year</th>
@@ -94,26 +91,26 @@ const Education = () => {
         <div className="flex flex-col gap-4">
           <span>
             <h2 className="text-xl font-semibold text-secondary">Bsc. Engineering</h2>
-            <p className=" text-lg text-white">in Electrical and Electronic Engineering</p>
-            <p className=" text-white">Begum Rokeya University, Rangpur</p>
-            <p className=" text-white font-semibold">CGPA: 3.10/4.00</p>
-            <p className=" text-white">Year: 2023 to Present</p>
+            <p className=" text-lgtext-slate-800">in Electrical and Electronic Engineering</p>
+            <p className="text-slate-800">Begum Rokeya University, Rangpur</p>
+            <p className="text-slate-800 font-semibold">CGPA: 3.10/4.00</p>
+            <p className="text-slate-800">Year: 2023 to Present</p>
           </span>
 
           <span>
             <h2 className="text-xl font-semibold text-secondary">Higher Secondary Certificate</h2>
-            <p className=" text-lg text-white">Science</p>
-            <p className=" text-white">Govt. Ashek Mahmud College, Jamalpur</p>
-            <p className=" text-white font-semibold">GPA: 5.00/5.00</p>
-            <p className=" text-white">Passing Year: 2021</p>
+            <p className=" text-lgtext-slate-800">Science</p>
+            <p className="text-slate-800">Govt. Ashek Mahmud College, Jamalpur</p>
+            <p className="text-slate-800 font-semibold">GPA: 5.00/5.00</p>
+            <p className="text-slate-800">Passing Year: 2021</p>
           </span>
 
           <span>
             <h2 className="text-xl font-semibold text-secondary">Secondary School Certificate</h2>
-            <p className=" text-lg text-white">Science</p>
-            <p className=" text-white">Jamalpur Zila School, Jamalpur</p>
-            <p className=" text-white font-semibold">GPA: 5.00/5.00</p>
-            <p className=" text-white">Passing Year: 2019</p>
+            <p className=" text-lg text-slate-800">Science</p>
+            <p className="text-slate-800">Jamalpur Zila School, Jamalpur</p>
+            <p className="text-slate-800 font-semibold">GPA: 5.00/5.00</p>
+            <p className="text-slate-800">Passing Year: 2019</p>
           </span>
         </div>
 

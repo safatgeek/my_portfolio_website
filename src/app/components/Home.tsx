@@ -19,7 +19,7 @@ const Home = () => {
     }, []);
 
     return (
-        <div ref={ref}>
+        <div ref={ref} className='mt-8 px-6 md:px-12'>
             <div className='flex flex-col gap-4'>
                 <span className=' text-4xl'>Hello! I'm</span>
                 <span className=' text-7xl'>TANJIM SAFAT</span>

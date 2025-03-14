@@ -7,9 +7,9 @@ const sections = [
   { name: "Home", id: "home" },
   { name: "About", id: "about" },
   { name: "Education", id: "education" },
-  { name: "Experience", id: "experience" },
   { name: "Skills", id: "skills" },
   { name: "Projects", id: "projects" },
+  { name: "Experience", id: "experience" },
   { name: "Contact", id: "contact" },
 ];
 
@@ -31,9 +31,8 @@ const Sidebar = () => {
               setActiveSectionName(section.id);
               setTimeOfLastClick(Date.now());
             }}
-            className={`hover:bg-slate-400 px-4 py-2 rounded-full cursor-pointer ${
-              activeSectionName === section.id ? "bg-slate-500 rounded-full px-4" : ""
-            }`}
+            className={`hover:bg-slate-400 px-4 py-2 rounded-full cursor-pointer ${activeSectionName === section.id ? "bg-slate-500 rounded-full px-4" : ""
+              }`}
           >
             {section.name}
           </motion.a>

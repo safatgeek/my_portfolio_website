@@ -26,7 +26,7 @@ const About = () => {
                 transition={{ duration: 1, delay: 0.3 }}
             >
                 <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">About Me</h2>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-slate-500">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia veritatis saepe deserunt ex sapiente in beatae
                     reprehenderit qui eaque? Unde magni recusandae voluptatibus distinctio consequatur nihil quaerat optio delectus nemo.
                 </p>

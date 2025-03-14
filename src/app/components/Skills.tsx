@@ -24,12 +24,12 @@ const Skills = () => {
       </motion.h2>
 
       <motion.div 
-        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 w-full max-w-3xl"
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 w-full max-w-3xl"
       >
         {skills.map((skill, index) => (
           <motion.div
             key={index}
-            className="bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-xl text-center text-sm font-semibold shadow-md"
+            className=" bg-secondary text-secondary-content px-4 py-2 rounded-xl text-center text-sm font-semibold shadow-md"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: index * 0.15 }}
