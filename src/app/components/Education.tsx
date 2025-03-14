@@ -58,7 +58,7 @@ const Education = () => {
                 <td>Electrical and Electronic Engineering</td>
                 <td>Begum Rokeya University, Rangpur</td>
                 <td>3.10/4.00</td>
-                <td>2023 to Now</td>
+                <td>2023 to Present</td>
               </tr>
               <tr>
                 <th>2</th>

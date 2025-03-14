@@ -8,7 +8,7 @@ import Skills from "./components/Skills";
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col w-full md:pl-48 lg:pl-52 p-4">
+    <div className="flex flex-col gap-20 md:gap-28 w-full md:pl-48 lg:pl-52 p-4">
       <Home />
 
       <About />

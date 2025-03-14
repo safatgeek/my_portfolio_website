@@ -23,14 +23,24 @@ const projects = [
 ];
 
 
-const cardVariants = {
+const mobileVariants = {
   hidden: { opacity: 0, x: 50 },
   visible: (index: number) => ({
     opacity: 1,
     x: 0,
+    scale: 1,
     transition: { duration: 0.5, delay: index * 0.2 },
   }),
 };
+
+const desktopVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: (index: number) => ({
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.5, delay: index * 0.2 },
+  })
+}
 
 const Projects = () => {
   const { ref } = useSectionInView("projects", 0.75);
@@ -52,6 +62,15 @@ const Projects = () => {
     <motion.div
       id="projects"
       ref={ref}
+      initial={{
+        opacity: 0
+      }}
+      whileInView={{
+        opacity: 1
+      }}
+      transition={{
+        duration: 0.3
+      }}
       className="flex flex-col items-center gap-8 mt-8 px-6 md:px-12"
     >
       <motion.h2 className="text-2xl md:text-3xl font-bold text-primary">
@@ -65,11 +84,12 @@ const Projects = () => {
             className={`card bg-base-100 h-[38rem] md:h-96 shadow-md cursor-pointer overflow-hidden flex 
             ${index % 2 === 0 ? "flex-col md:flex-row" : "flex-col-reverse md:flex-row-reverse"} 
             hover:scale-105 hover:shadow-lg transition-transform duration-300`}
-            variants={cardVariants}
+            variants={isMobile ? mobileVariants : desktopVariants }
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            transition={{ duration: 0.3 }}
             custom={index}
+            viewport={{ once: false }}
             onClick={() => window.open(project.liveLink, "_blank")}
           >
             {/* Image Container */}
