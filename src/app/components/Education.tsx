@@ -12,7 +12,7 @@ const Education = () => {
       id="education"
       ref={ref}>
       <motion.div
-        className="hidden md:flex flex-col items-center justify-between gap-8 mt-8 px-6 md:px-12"
+        className="hidden lg:flex flex-col items-center justify-between gap-8 mt-8 px-6 md:px-12"
       >
         <motion.h2
           className="text-2xl md:text-3xl font-bold text-primary mb-4"
@@ -86,7 +86,7 @@ const Education = () => {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: false, margin: "-50px" }}
         transition={{ duration: 1 }}
-        className="flex flex-col gap-4 md:hidden mt-8 p-4">
+        className="flex flex-col gap-4 lg:hidden mt-8 p-4">
         <h2 className="text-2xl md:3xl font-bold text-primary">Education</h2>
         <div className="flex flex-col gap-4">
           <span>

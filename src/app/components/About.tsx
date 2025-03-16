@@ -11,7 +11,7 @@ const About = () => {
         <motion.div
             id="about"
             ref={ref}
-            className="flex flex-col md:flex-row items-center justify-between gap-8 mt-8 px-6 md:px-12"
+            className="flex flex-col md:flex-row items-center justify-between gap-12 mt-12 px-6 md:px-16 min-h-[500px]"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: false, margin: "-50px" }}
@@ -40,9 +40,9 @@ const About = () => {
                 viewport={{ once: false }}
                 transition={{ duration: 1, delay: 0.3 }}
             >
-                <div className="relative w-[300px] h-[300px] rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+                <div className="relative w-[300px] h-[400px] rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
                     <Image
-                        src="/images/image1.jpg"
+                        src="/images/aboutImage.jpeg"
                         alt="About Image"
                         fill
                         className="rounded-xl object-cover"
