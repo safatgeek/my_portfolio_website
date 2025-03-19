@@ -17,7 +17,7 @@ const Skills = () => {
     <motion.div
       id="skills"
       ref={ref}
-      className="flex flex-col gap-8 mt-8 px-6 py-8 items-center justify-between"
+      className="flex flex-col gap-8 py-24 px-6 md:px-16 md:py-8 items-center justify-between"
     >
       <motion.h2 className="text-2xl md:text-3xl font-bold text-primary">
         Skills

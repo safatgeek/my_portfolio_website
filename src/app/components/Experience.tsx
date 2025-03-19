@@ -25,7 +25,7 @@ const Experience = () => {
     <motion.div
       id="experience"
       ref={ref}
-      className="flex flex-col w-full py-8 items-center justify-between gap-8 mt-8 px-6 md:px-12"
+      className="flex flex-col w-full items-center justify-between gap-8 py-24 px-6 md:px-16 md:py-8"
     >
       <motion.h2
         className=' text-2xl md:text-3xl font-bold text-primary'

@@ -20,7 +20,7 @@ const Sidebar = () => {
   return (
     <>
       {/* Desktop Sidebar (Hidden on mobile) */}
-      <div className="hidden md:flex flex-col h-full p-4 w-44 lg:w-48 bg-base-content text-base-100 text-2xl items-center gap-10 fixed top-0 left-0">
+      <div className="hidden md:flex flex-col h-full pt-16 px-4 w-44 lg:w-48 bg-base-content text-base-100 text-2xl items-center gap-10 fixed top-0 left-0">
         {sections.map((section) => (
           <motion.a
             key={section.id}
@@ -67,7 +67,14 @@ const Sidebar = () => {
           </div>
         </div>
         <div className="navbar-center">
-          <a className="btn btn-ghost text-xl">SAFAT</a>
+          <a
+            href="#home"
+            className="btn btn-ghost text-xl"
+            onClick={() => {
+              setActiveSectionName("home");
+              setTimeOfLastClick(Date.now());
+            }}
+          >SAFAT</a>
         </div>
         <div className=" navbar-end"></div>
       </div>

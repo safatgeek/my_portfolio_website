@@ -10,10 +10,10 @@ const Education = () => {
   return (
     <div
       id="education"
-      className=" py-8"
+      className="py-24 px-6 md:px-16 md:py-8"
       ref={ref}>
       <motion.div
-        className="hidden lg:flex flex-col items-center justify-between gap-8 mt-8 px-6 md:px-12"
+        className="hidden lg:flex flex-col items-center justify-between gap-8 px-6 md:px-12"
       >
         <motion.h2
           className="text-2xl md:text-3xl font-bold text-primary mb-4"

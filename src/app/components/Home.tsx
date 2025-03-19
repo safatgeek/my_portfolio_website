@@ -24,7 +24,7 @@ const Home = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
             ref={ref}
-            className="mt-8 px-6 md:px-12 py-8 flex flex-col items-center gap-12"
+            className=" py-24 px-6 md:px-16 md:py-8 flex flex-col items-center gap-12"
         >
             {/* Text Section */}
             <motion.div 

@@ -71,7 +71,7 @@ const Projects = () => {
       transition={{
         duration: 0.3
       }}
-      className="flex flex-col items-center gap-8 mt-8 px-6 md:px-12 py-8"
+      className="flex flex-col items-center gap-8 py-24 px-6 md:px-16 md:py-8"
     >
       <motion.h2 className="text-2xl md:text-3xl font-bold text-primary">
         Projects
@@ -89,7 +89,7 @@ const Projects = () => {
             whileInView="visible"
             transition={{ duration: 0.3 }}
             custom={index}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             onClick={() => window.open(project.liveLink, "_blank")}
           >
             {/* Image Container */}

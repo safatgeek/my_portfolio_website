@@ -10,7 +10,7 @@ import Skills from "./components/Skills";
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col overflow-x-hidden pt-16 items-center gap-20 md:gap-28 w-full md:pl-48 lg:pl-52 p-4">
+    <div className="flex flex-col overflow-x-hidden pt-16 items-center gap-12 md:gap-28 w-full md:pl-48 lg:pl-52 p-4">
       <ScroolScaler />
       
       <Home />

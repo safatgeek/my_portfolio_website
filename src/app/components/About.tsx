@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 import { useSectionInView } from "@/hooks/hooks";
 
 const About = () => {
-    const { ref } = useSectionInView("about", 0.75);
+    const { ref } = useSectionInView("about", 0.5);
 
     return (
         <motion.div
             id="about"
             ref={ref}
-            className="flex flex-col md:flex-row items-center justify-between gap-12 mt-12 px-6 md:px-16 py-8 min-h-[500px]"
+            className="flex flex-col md:flex-row items-center justify-between gap-12 py-24 px-6 md:px-16 md:py-8 min-h-[500px]"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: false, margin: "-50px" }}
