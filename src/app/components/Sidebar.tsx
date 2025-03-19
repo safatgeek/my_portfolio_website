@@ -40,7 +40,7 @@ const Sidebar = () => {
       </div>
 
       {/* Mobile Navbar */}
-      <div className="navbar md:hidden bg-base-content text-base-100">
+      <div className="navbar md:hidden fixed z-50 bg-base-content text-base-100">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">

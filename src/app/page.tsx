@@ -5,11 +5,14 @@ import Education from "./components/Education";
 import Experience from "./components/Experience";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
+import ScroolScaler from "./components/ScroolScaler";
 import Skills from "./components/Skills";
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col items-center gap-20 md:gap-28 w-full md:pl-48 lg:pl-52 p-4">
+    <div className="flex flex-col overflow-x-hidden pt-16 items-center gap-20 md:gap-28 w-full md:pl-48 lg:pl-52 p-4">
+      <ScroolScaler />
+      
       <Home />
 
       <Divider />

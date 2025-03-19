@@ -19,11 +19,12 @@ const Home = () => {
 
     return (
         <motion.div
+            id='home'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
             ref={ref}
-            className="mt-8 px-6 md:px-12 flex flex-col items-center gap-12"
+            className="mt-8 px-6 md:px-12 py-8 flex flex-col items-center gap-12"
         >
             {/* Text Section */}
             <motion.div 

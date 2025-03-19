@@ -71,7 +71,7 @@ const Projects = () => {
       transition={{
         duration: 0.3
       }}
-      className="flex flex-col items-center gap-8 mt-8 px-6 md:px-12"
+      className="flex flex-col items-center gap-8 mt-8 px-6 md:px-12 py-8"
     >
       <motion.h2 className="text-2xl md:text-3xl font-bold text-primary">
         Projects

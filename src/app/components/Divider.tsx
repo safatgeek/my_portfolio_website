@@ -1,8 +1,28 @@
-"use client"
+"use client";
 
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const Divider = () => {
+    const [scrollDirection, setScrollDirection] = useState<"up" | "down">("down");
+
+    useEffect(() => {
+        let lastScrollY = window.scrollY;
+
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            if (currentScrollY > lastScrollY) {
+                setScrollDirection("down"); // Scrolling down
+            } else if (currentScrollY < lastScrollY) {
+                setScrollDirection("up"); // Scrolling up
+            }
+            lastScrollY = currentScrollY;
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
         <>
             {/* Horizontal Divider for Small Screens */}
@@ -14,14 +34,24 @@ const Divider = () => {
             />
 
             {/* Vertical Divider for Large Screens */}
-            <motion.div
-                className='bg-violet-900 my-12 h-16 w-1 rounded-full hidden md:block'
+            <div className="relative flex flex-col items-center">
+              
 
-                initial={{ opacity: 0, y: 100 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.125 }}>
-
-            </motion.div>
+                {/* Dynamic Arrow based on Scroll Direction */}
+                <motion.span
+                    className="hidden md:block text-violet-900 text-4xl"
+                    key={scrollDirection} // Re-render when direction changes
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 5 }}
+                    transition={{
+                        duration: 0.5,
+                        repeat: Infinity,
+                        repeatType: "reverse",
+                    }}
+                >
+                    {scrollDirection === "down" ? "↓" : "↑"}
+                </motion.span>
+            </div>
         </>
     );
 };
