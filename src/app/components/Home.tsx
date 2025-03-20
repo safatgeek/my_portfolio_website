@@ -5,6 +5,8 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 
+import { FaLinkedin, FaFacebook, FaGithub } from "react-icons/fa";
+
 const Home = () => {
     const titles = ["Full Stack Web Developer", "Competitive Programmer"];
     const [index, setIndex] = useState(0);
@@ -27,7 +29,7 @@ const Home = () => {
             className=" py-24 px-6 md:px-16 md:py-8 flex flex-col items-center gap-12"
         >
             {/* Text Section */}
-            <motion.div 
+            <motion.div
                 initial={{ x: -50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8 }}
@@ -49,10 +51,37 @@ const Home = () => {
                         </motion.span>
                     </AnimatePresence>
                 </div>
+
+                <div className='flex gap-4 mt-4'>
+                    <a
+                        className='transition-transform duration-300 hover:scale-110'
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.linkedin.com/in/tanjim-alam-524526296/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app&fbclid=IwY2xjawJBRAVleHRuA2FlbQIxMAABHdoSqCkUNYnqd_zKFW4ceN1rFyu-kxqbH7a2ceg35vUCo3u4YlnQmHHRoQ_aem_H_8LoIWjmsZsOztjQtPCiA">
+                        <FaLinkedin className='text-sky-600 h-12 w-12' />
+
+                    </a>
+                    <a
+                        className='transition-transform duration-300 hover:scale-110'
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://github.com/safatgeek">
+                        <FaGithub className=' h-12 w-12' />
+
+                    </a>
+                    <a
+                        className='transition-transform duration-300 hover:scale-110'
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.facebook.com/tanjim.safat.2024?rdid=dodmSfN0WUhtU8Fb&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19y85BuBvh">
+                        <FaFacebook className=' h-12 w-12 text-blue-700' />
+
+                    </a>
+                </div>
             </motion.div>
 
             {/* Image Section */}
-            <motion.div 
+            <motion.div
                 initial={{ x: 50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8 }}

@@ -5,9 +5,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const skills = [
-  "JavaScript", "TypeScript", "React", "Next.js", 
+  "JavaScript", "TypeScript", "React", "Next.js",
   "Node.js", "Express.js", "MongoDB", "Firebase",
-  "Tailwind CSS", "Framer Motion", "Prisma", "Zustand"
+  "HTML", "CSS", "Tailwind CSS", "Framer Motion",
+  "Prisma", "Zustand", "DaisyUI", "Resend", "Cloudinary",
+
 ];
 
 const Skills = () => {
@@ -23,22 +25,23 @@ const Skills = () => {
         Skills
       </motion.h2>
 
-      <motion.div 
-        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 w-full max-w-3xl"
+      <motion.div
+        className="flex flex-wrap justify-center gap-4 w-full max-w-4xl"
       >
         {skills.map((skill, index) => (
           <motion.div
             key={index}
-            className=" bg-teal-100 px-4 py-2 rounded-xl text-center text-sm font-semibold shadow-md"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: index * 0.15 }}
+            className="badge backdrop-brightness-95 badge-outline border-primary badge-lg  px-4 py-4 text-lg font-semibold shadow-md"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3, delay: index * 0.1 }}
             viewport={{ once: true }}
           >
             {skill}
           </motion.div>
         ))}
       </motion.div>
+
     </motion.div>
   );
 };

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/hooks/hooks";
+import Image from "next/image";
 
 const Education = () => {
   const { ref } = useSectionInView("education", 0.75);
@@ -87,36 +88,93 @@ const Education = () => {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: false, margin: "-50px" }}
         transition={{ duration: 1 }}
-        className="flex flex-col gap-4 lg:hidden mt-8 p-4">
-        <h2 className="text-2xl md:3xl font-bold text-primary">Education</h2>
-        <div className="flex flex-col gap-4">
-          <span>
-            <h2 className="text-xl font-semibold text-secondary">Bsc. Engineering</h2>
-            <p className=" text-lgtext-slate-800">in Electrical and Electronic Engineering</p>
-            <p className="text-slate-800">Begum Rokeya University, Rangpur</p>
-            <p className="text-slate-800 font-semibold">CGPA: 3.10/4.00</p>
-            <p className="text-slate-800">Year: 2023 to Present</p>
-          </span>
+        className="flex flex-col gap-6 lg:hidden mt-8 p-4"
+      >
+        <h2 className="text-2xl md:text-3xl font-bold text-primary">Education</h2>
 
-          <span>
-            <h2 className="text-xl font-semibold text-secondary">Higher Secondary Certificate</h2>
-            <p className=" text-lgtext-slate-800">Science</p>
-            <p className="text-slate-800">Govt. Ashek Mahmud College, Jamalpur</p>
-            <p className="text-slate-800 font-semibold">GPA: 5.00/5.00</p>
-            <p className="text-slate-800">Passing Year: 2021</p>
-          </span>
+        <div className="flex flex-col gap-6">
+          {/* BRUR */}
+          <div className="flex items-center justify-between gap-6">
+            <div>
+              <h2 className="text-xl font-semibold text-secondary">BSc. Engineering</h2>
+              <p className="text-lg text-slate-800">in Electrical and Electronic Engineering</p>
+              <p className="text-slate-800">Begum Rokeya University, Rangpur</p>
+              <p className="text-slate-800 font-semibold">CGPA: 3.10/4.00</p>
+              <p className="text-slate-800">Year: 2023 to Present</p>
+            </div>
 
-          <span>
-            <h2 className="text-xl font-semibold text-secondary">Secondary School Certificate</h2>
-            <p className=" text-lg text-slate-800">Science</p>
-            <p className="text-slate-800">Jamalpur Zila School, Jamalpur</p>
-            <p className="text-slate-800 font-semibold">GPA: 5.00/5.00</p>
-            <p className="text-slate-800">Passing Year: 2019</p>
-          </span>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <Image
+                className="w-32 h-32 md:w-36 md:h-36  object-contain"
+                height={128}
+                width={128}
+                alt="BRUR Logo"
+                src="/images/BRUR_Logo.svg.png"
+              />
+            </motion.div>
+          </div>
+
+          
+          <div className="flex items-center justify-between gap-6">
+            <div>
+              <h2 className="text-xl font-semibold text-secondary">Higher Secondary Certificate</h2>
+              <p className="text-lg text-slate-800">Science</p>
+              <p className="text-slate-800">Govt. Ashek Mahmud College, Jamalpur</p>
+              <p className="text-slate-800 font-semibold">GPA: 5.00/5.00</p>
+              <p className="text-slate-800">Passing Year: 2021</p>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              whileHover={{ scale: 1.1 }}
+
+            >
+              <Image
+                className="w-[8.5rem] h-[8.5rem] md:w-36 md:h-36 object-contain"
+                height={128}
+                width={128}
+                alt="AMC Logo"
+                src="/images/amc.png"
+              />
+            </motion.div>
+          </div>
+
+          
+          <div className="flex items-center justify-between gap-6">
+            <div>
+              <h2 className="text-xl font-semibold text-secondary">Secondary School Certificate</h2>
+              <p className="text-lg text-slate-800">Science</p>
+              <p className="text-slate-800">Jamalpur Zila School, Jamalpur</p>
+              <p className="text-slate-800 font-semibold">GPA: 5.00/5.00</p>
+              <p className="text-slate-800">Passing Year: 2019</p>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              whileHover={{ scale: 1.1 }}
+
+            >
+              <Image
+                className="w-32 h-32 md:w-36 md:h-36  object-contain"
+                height={128}
+                width={128}
+                alt="JZS Logo"
+                src="/images/jzs.png"
+              />
+            </motion.div>
+          </div>
         </div>
-
-
       </motion.div>
+
     </div>
 
   );
