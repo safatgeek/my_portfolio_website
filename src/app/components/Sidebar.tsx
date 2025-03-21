@@ -1,7 +1,9 @@
 "use client"
 
+import { ThemeContext } from "@/context/ThemeContext";
 import { useActiveSection, useTimeOfLastClick } from "@/store/store"
 import { motion } from "framer-motion"
+import { useContext } from "react";
 
 const sections = [
   { name: "Home", id: "home" },
@@ -14,7 +16,11 @@ const sections = [
 ];
 
 const Sidebar = () => {
+
+  const {changeTheme} = useContext(ThemeContext)
+
   const { setActiveSectionName, activeSectionName } = useActiveSection();
+
   const { setTimeOfLastClick } = useTimeOfLastClick();
 
   return (
@@ -36,7 +42,10 @@ const Sidebar = () => {
           >
             {section.name}
           </motion.a>
+          
         ))}
+        <button onClick={() => changeTheme("dark")}>Dark</button>
+        <button onClick={() => changeTheme("cupcake")}>Light</button>
       </div>
 
       {/* Mobile Navbar */}
