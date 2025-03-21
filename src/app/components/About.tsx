@@ -26,7 +26,7 @@ const About = () => {
                 transition={{ duration: 1, delay: 0.3 }}
             >
                 <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">About Me</h2>
-                <p className="leading-relaxed text-slate-500">
+                <p className="leading-relaxed text-base-content font-semibold">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia veritatis saepe deserunt ex sapiente in beatae
                     reprehenderit qui eaque? Unde magni recusandae voluptatibus distinctio consequatur nihil quaerat optio delectus nemo.
                 </p>
@@ -40,7 +40,7 @@ const About = () => {
                 viewport={{ once: false }}
                 transition={{ duration: 1, delay: 0.3 }}
             >
-                <div className="relative w-[300px] h-[400px] rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+                <div className="relative w-[260px] h-[350px] md:w-[300px] shadow-md shadow-teal-100 md:h-[400px] rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
                     <Image
                         src="/images/aboutImage.jpeg"
                         alt="About Image"

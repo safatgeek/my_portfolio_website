@@ -1,9 +1,8 @@
 "use client"
 
-import { ThemeContext } from "@/context/ThemeContext";
 import { useActiveSection, useTimeOfLastClick } from "@/store/store"
 import { motion } from "framer-motion"
-import { useContext } from "react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const sections = [
   { name: "Home", id: "home" },
@@ -16,8 +15,6 @@ const sections = [
 ];
 
 const Sidebar = () => {
-
-  const {changeTheme} = useContext(ThemeContext)
 
   const { setActiveSectionName, activeSectionName } = useActiveSection();
 
@@ -44,8 +41,8 @@ const Sidebar = () => {
           </motion.a>
           
         ))}
-        <button onClick={() => changeTheme("dark")}>Dark</button>
-        <button onClick={() => changeTheme("cupcake")}>Light</button>
+
+        <ThemeToggle />
       </div>
 
       {/* Mobile Navbar */}
@@ -85,7 +82,9 @@ const Sidebar = () => {
             }}
           >SAFAT</a>
         </div>
-        <div className=" navbar-end"></div>
+        <div className=" navbar-end">
+          <ThemeToggle />
+        </div>
       </div>
     </>
   );

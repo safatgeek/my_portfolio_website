@@ -81,7 +81,7 @@ const Projects = () => {
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className={`card bg-base-100 h-[38rem] md:h-96 shadow-md cursor-pointer overflow-hidden flex 
+            className={`card  h-[38rem] bg-base-300 md:h-96 shadow-md cursor-pointer overflow-hidden flex 
             ${index % 2 === 0 ? "flex-col md:flex-row" : "flex-col-reverse md:flex-row-reverse"} 
             hover:scale-105 hover:shadow-lg transition-transform duration-300`}
             variants={isMobile ? mobileVariants : desktopVariants }
@@ -96,7 +96,7 @@ const Projects = () => {
             <figure className="relative w-full h-1/3 md:w-1/3 md:h-full">
               <motion.div
                 className="w-full h-full"
-                initial={{ opacity: 0.5 }}
+          
                 whileHover={isMobile
                   ? { scale: 1.05, opacity: 1 } // Mobile: Scale up
                   : { rotate: index % 2 === 0 ? 5 : -5, opacity: 1 } // Desktop: Rotate
@@ -114,8 +114,8 @@ const Projects = () => {
 
             {/* Card Content */}
             <div className="card-body w-full h-2/3 md:w-2/3 md:h-full flex flex-col justify-between">
-              <h2 className="card-title text-lg font-semibold">{project.title}</h2>
-              <p className="text-gray-600">{project.description}</p>
+              <h2 className="card-title text-lg text-base-content font-semibold">{project.title}</h2>
+              <p className=" text-base-content text-opacity-75">{project.description}</p>
 
               {/* What I Use */}
               <div className="flex flex-wrap gap-2 mt-3">

@@ -96,11 +96,11 @@ const Education = () => {
           {/* BRUR */}
           <div className="flex items-center justify-between gap-6">
             <div>
-              <h2 className="text-xl font-semibold text-secondary">BSc. Engineering</h2>
-              <p className="text-lg text-slate-800">in Electrical and Electronic Engineering</p>
-              <p className="text-slate-800">Begum Rokeya University, Rangpur</p>
-              <p className="text-slate-800 font-semibold">CGPA: 3.10/4.00</p>
-              <p className="text-slate-800">Year: 2023 to Present</p>
+              <h2 className="text-xl font-semibold text-purple-400">BSc. Engineering</h2>
+              <p className="text-lg ">in Electrical and Electronic Engineering</p>
+              <p className="">Begum Rokeya University, Rangpur</p>
+              <p className=" font-semibold">CGPA: 3.10/4.00</p>
+              <p className="">Year: 2023 to Present</p>
             </div>
 
             <motion.div
@@ -122,11 +122,11 @@ const Education = () => {
           
           <div className="flex items-center justify-between gap-6">
             <div>
-              <h2 className="text-xl font-semibold text-secondary">Higher Secondary Certificate</h2>
-              <p className="text-lg text-slate-800">Science</p>
-              <p className="text-slate-800">Govt. Ashek Mahmud College, Jamalpur</p>
-              <p className="text-slate-800 font-semibold">GPA: 5.00/5.00</p>
-              <p className="text-slate-800">Passing Year: 2021</p>
+              <h2 className="text-xl font-semibold text-purple-400">Higher Secondary Certificate</h2>
+              <p className="text-lg ">Science</p>
+              <p className="">Govt. Ashek Mahmud College, Jamalpur</p>
+              <p className=" font-semibold">GPA: 5.00/5.00</p>
+              <p className="">Passing Year: 2021</p>
             </div>
 
             <motion.div
@@ -137,11 +137,11 @@ const Education = () => {
 
             >
               <Image
-                className="w-[8.5rem] h-[8.5rem] md:w-36 md:h-36 object-contain"
+                className="w-28 h-36 md:w-32 md:h-36 object-contain"
                 height={128}
                 width={128}
                 alt="AMC Logo"
-                src="/images/amc.png"
+                src="/images/amc.jpeg"
               />
             </motion.div>
           </div>
@@ -149,11 +149,11 @@ const Education = () => {
           
           <div className="flex items-center justify-between gap-6">
             <div>
-              <h2 className="text-xl font-semibold text-secondary">Secondary School Certificate</h2>
-              <p className="text-lg text-slate-800">Science</p>
-              <p className="text-slate-800">Jamalpur Zila School, Jamalpur</p>
-              <p className="text-slate-800 font-semibold">GPA: 5.00/5.00</p>
-              <p className="text-slate-800">Passing Year: 2019</p>
+              <h2 className="text-xl font-semibold text-purple-400">Secondary School Certificate</h2>
+              <p className="text-lg ">Science</p>
+              <p className="">Jamalpur Zila School, Jamalpur</p>
+              <p className=" font-semibold">GPA: 5.00/5.00</p>
+              <p className="">Passing Year: 2019</p>
             </div>
 
             <motion.div

@@ -2,7 +2,7 @@
 
 import { useSectionInView } from '@/hooks/hooks'
 import React from 'react'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 
 const Experience = () => {
 
@@ -11,14 +11,14 @@ const Experience = () => {
   const experiences = [
     {
       year: "2024 - Present",
-      title: "Internship - Third Rock Technologies",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+      title: "Junior Software Engineer - Third Rock Technologies",
+      description: "Promoted to Junior Software Engineer after completing an internship at Third Rock Technologies. Currently working on developing web applications, optimizing performance, and collaborating with a team to implement innovative solutions."
     },
 
     {
       year: "2023 - 2024",
       title: "Internship - Third Rock Technologies",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+      description: "Successfully completed an internship focused on web development and basic problem-solving. Gained hands-on experience in building web applications, optimizing performance, and solving real-world coding challenges."
     }
   ]
   return (
@@ -33,16 +33,38 @@ const Experience = () => {
         Experience
       </motion.h2>
       {experiences.map((experience, index) => (
-        <motion.div key={index} className='flex gap-6 w-full max-w-3xl justify-between'>
-          <div className=' w-1/3'>
-            {experience.year}
-          </div>
+        <AnimatePresence  key={index}>
+          <motion.div
+            initial={{
+              scale: 0,
+              y: 0,
+              rotate: "180deg"
+            }}
 
-          <div className='flex flex-col w-2/3'>
-            <h2>{experience.title}</h2>
-            <p>{experience.description}</p>
-          </div>
-        </motion.div>
+            whileInView={{
+              rotate: "0deg",
+              scale: 1,
+              y: [0, 150,-150, -150, 0]
+            }}
+
+            transition={{
+              duration: 1,
+              delay: index * 0.1,
+              ease: "backOut"
+            }}
+           
+            className='flex flex-col md:flex-row gap-6 w-full max-w-3xl justify-between bg-base-300 rounded-2xl p-4'>
+            <div className=' w-full md:w-1/3 text-lg text-base-content font-semibold'>
+              {experience.year}
+            </div>
+
+            <div className='flex flex-col w-full md:w-2/3'>
+              <h2 className=' text-lg text-base-content font-semibold'>{experience.title}</h2>
+              <p className=' mt-2 text-base-content text-opacity-75'>{experience.description}</p>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+
       ))}
     </motion.div>
   )
