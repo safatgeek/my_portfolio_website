@@ -9,15 +9,15 @@ const projects = [
   {
     title: "Twitter Clone",
     description: "A full-stack Twitter clone built with Next.js, Tailwind CSS, and MongoDB. Twitter clone built with Next.js, Tailwind CSS, and MongoDB Twitter clone built with Next.js, Tailwind CSS, and MongoDB Twitter clone built with Next.js, Tailwind CSS, and MongoDB",
-    image: "/images/twitter-clone-ss.png",
-    liveLink: "https://twitter-clone.example.com",
+    image: "/images/twitter-clone.png",
+    liveLink: "https://twitter-third-rock.onrender.com",
     use: ["React", "Tailwind CSS", "Express", "MongoDB", "NodeJS", "DaisyUI", "Tanstack Query"],
   },
   {
     title: "E-Commerce Platform",
     description: "A Next.js-based e-commerce platform with Stripe integration.",
-    image: "/images/twitter-clone-ss.png",
-    liveLink: "https://ecommerce.example.com",
+    image: "/images/twitter-clone.png",
+    liveLink: "",
     use: ["React", "Tailwind CSS", "Express", "MongoDB", "NodeJS", "DaisyUI", "Tanstack Query"],
   },
 ];
@@ -84,19 +84,19 @@ const Projects = () => {
             className={`card  h-[38rem] bg-base-300 md:h-96 shadow-md cursor-pointer overflow-hidden flex 
             ${index % 2 === 0 ? "flex-col md:flex-row" : "flex-col-reverse md:flex-row-reverse"} 
             hover:scale-105 hover:shadow-lg transition-transform duration-300`}
-            variants={isMobile ? mobileVariants : desktopVariants }
+            variants={isMobile ? mobileVariants : desktopVariants}
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.3 }}
             custom={index}
             viewport={{ once: true }}
-            onClick={() => window.open(project.liveLink, "_blank")}
+            onClick={() => project.liveLink && window.open(project.liveLink, "_blank")}
           >
             {/* Image Container */}
             <figure className="relative w-full h-1/3 md:w-1/3 md:h-full">
               <motion.div
                 className="w-full h-full"
-          
+
                 whileHover={isMobile
                   ? { scale: 1.05, opacity: 1 } // Mobile: Scale up
                   : { rotate: index % 2 === 0 ? 5 : -5, opacity: 1 } // Desktop: Rotate

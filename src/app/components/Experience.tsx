@@ -52,6 +52,10 @@ const Experience = () => {
               delay: index * 0.1,
               ease: "backOut"
             }}
+            
+            viewport={{
+              once:true
+            }}
            
             className='flex flex-col md:flex-row gap-6 w-full max-w-3xl justify-between bg-base-300 rounded-2xl p-4'>
             <div className=' w-full md:w-1/3 text-lg text-base-content font-semibold'>
