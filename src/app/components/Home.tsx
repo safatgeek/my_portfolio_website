@@ -35,7 +35,7 @@ const Home = () => {
                 transition={{ duration: 0.8 }}
                 className="text-center md:text-left flex-1"
             >
-                <span className="text-4xl font-semibold ">Hello! I'm</span>
+                <span className="text-4xl font-semibold ">Hello! I&apos;m</span>
                 <h1 className="text-7xl font-bold text-base-content mt-4">TANJIM SAFAT</h1>
                 <div className="h-10 overflow-hidden mt-4">
                     <AnimatePresence mode="wait">
