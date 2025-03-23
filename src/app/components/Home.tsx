@@ -24,7 +24,7 @@ const Home = () => {
             id='home'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 1, delay:.3 }}
             ref={ref}
             className=" py-24 px-6 md:px-16 md:py-8 flex flex-col items-center gap-12"
         >
@@ -32,7 +32,7 @@ const Home = () => {
             <motion.div
                 initial={{ x: -50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.8, delay:.3 }}
                 className="text-center md:text-left flex-1"
             >
                 <span className="text-4xl font-semibold ">Hello! I&apos;m</span>

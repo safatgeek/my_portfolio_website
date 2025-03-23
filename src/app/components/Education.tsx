@@ -21,7 +21,7 @@ const Education = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, margin: "-50px" }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 1, delay:.3}}
         >Education</motion.h2>
 
         {/* Auto-Scrolling Table */}
