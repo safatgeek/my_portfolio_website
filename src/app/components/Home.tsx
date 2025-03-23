@@ -8,7 +8,7 @@ import React, { useEffect, useState } from 'react';
 import { FaLinkedin, FaFacebook, FaGithub } from "react-icons/fa";
 
 const Home = () => {
-    const titles = ["Full Stack Web Developer", "Competitive Programmer"];
+    const titles = ["Full Stack Web Developer", "Competitive Programmer", "Continuous learner"];
     const [index, setIndex] = useState(0);
     const { ref } = useSectionInView("home", 0.75);
 
@@ -17,7 +17,7 @@ const Home = () => {
             setIndex((prevIndex) => (prevIndex + 1) % titles.length);
         }, 2200);
         return () => clearInterval(interval);
-    }, []);
+    }, [titles.length]);
 
     return (
         <motion.div

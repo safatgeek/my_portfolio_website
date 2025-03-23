@@ -1,6 +1,7 @@
 "use client"
 
 import { createContext, useEffect, useState } from "react"
+import { ClientThemeWrapperProps } from "./ClientThemeWrapper";
 
 interface ThemeContextType {
     theme: string;
@@ -12,7 +13,7 @@ export const ThemeContext = createContext<ThemeContextType> ({
     changeTheme: () => {}
 });
 
-export const ThemeProvider = ({children}: any) => {
+export const ThemeProvider = ({children}: ClientThemeWrapperProps) => {
     const [theme, setTheme] = useState("cupcake");
     const [isMounted, setIsMounted] = useState(false);
 

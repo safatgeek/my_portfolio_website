@@ -42,7 +42,7 @@ const About = () => {
                     transition={{ duration: 1, delay: 0.3 }}
                 >
                     <p className="md:leading-relaxed text-base md:text-lg text-base-content font-semibold">
-                        I'm Safat, an engineering student in Electrical and Electronic Engineering (EEE) and a Junior Software Engineer. As a MERN stack developer, I have hands-on experience building scalable applications, including a Twitter clone and a commercial Tuition Media platform. With expertise in Next.js, TypeScript, Firebase authentication, MongoDB, and Cloudinary, I focus on creating efficient and user-friendly web solutions. My work involves state management, real-time features, frontend, backend and monetization strategies like Google AdSense.
+                        I&apos;m Safat, an engineering student in Electrical and Electronic Engineering (EEE) and a Junior Software Engineer. As a MERN stack developer, I have hands-on experience building scalable applications, including a Twitter clone and a commercial Tuition Media platform. With expertise in Next.js, TypeScript, Firebase authentication, MongoDB, and Cloudinary, I focus on creating efficient and user-friendly web solutions. My work involves state management, real-time features, frontend, backend and monetization strategies like Google AdSense.
                     </p>
                 </motion.div>
 

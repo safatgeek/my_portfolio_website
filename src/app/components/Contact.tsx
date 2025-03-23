@@ -3,7 +3,7 @@
 import { useSectionInView } from "@/hooks/hooks";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { FaFacebook, FaLinkedin, FaWhatsapp, FaEnvelope, FaPaperPlane } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaWhatsapp, FaPaperPlane } from "react-icons/fa";
 
 const socialLinks = [
   { icon: FaFacebook, link: "https://www.facebook.com/tanjim.safat.2024", color: "#1877F2" },
