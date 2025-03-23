@@ -32,7 +32,7 @@ const Home = () => {
             <motion.div
                 initial={{ x: -50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay:.3 }}
+                transition={{ duration: 0.8, delay:.5 }}
                 className="text-center md:text-left flex-1"
             >
                 <span className="text-4xl font-semibold ">Hello! I&apos;m</span>
@@ -88,7 +88,7 @@ const Home = () => {
             <motion.div
                 initial={{ x: 50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.8, delay:.5 }}
                 className="flex-1 flex justify-center"
             >
                 <Image
