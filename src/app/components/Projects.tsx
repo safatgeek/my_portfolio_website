@@ -8,17 +8,17 @@ import Image from "next/image";
 const projects = [
   {
     title: "Twitter Clone",
-    description: "A full-stack Twitter clone built with Next.js, Tailwind CSS, and MongoDB. Twitter clone built with Next.js, Tailwind CSS, and MongoDB Twitter clone built with Next.js, Tailwind CSS, and MongoDB Twitter clone built with Next.js, Tailwind CSS, and MongoDB",
+    description: "Built a Twitter clone with custom improvements, overcoming challenges in state management, API integration, and database structuring. Gained hands-on full-stack experience. Now live in my portfolio.",
     image: "/images/twitter-clone.png",
     liveLink: "https://twitter-third-rock.onrender.com",
-    use: ["React", "Tailwind CSS", "Express", "MongoDB", "NodeJS", "DaisyUI", "Tanstack Query"],
+    use: ["JavaScript", "React", "Tailwind CSS", "DaisyUI", "Express", "MongoDB", "NodeJS", "TanStack Query", "Cloudinary"],
   },
   {
-    title: "E-Commerce Platform",
-    description: "A Next.js-based e-commerce platform with Stripe integration.",
-    image: "/images/twitter-clone.png",
+    title: "BD Tuition",
+    description: "A personal Next.js-based platform connecting tutors and students by subjects, districts, institutes and more. Built for commercial use with Google AdSense integration. Deployment pending.",
+    image: "/images/bd-tuition.png",
     liveLink: "",
-    use: ["React", "Tailwind CSS", "Express", "MongoDB", "NodeJS", "DaisyUI", "Tanstack Query"],
+    use: ["TypeScript", "Next.JS", "Tailwind CSS", "DaisyUI", "Express", "Firebase", "MongoDB", "NodeJS", "Cloudinary"],
   },
 ];
 
@@ -81,15 +81,19 @@ const Projects = () => {
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className={`card  h-[38rem] bg-base-300 md:h-96 shadow-md cursor-pointer overflow-hidden flex 
+            className={`card h-[38rem] bg-base-300 md:h-96 shadow-md cursor-pointer overflow-hidden flex 
             ${index % 2 === 0 ? "flex-col md:flex-row" : "flex-col-reverse md:flex-row-reverse"} 
-            hover:scale-105 hover:shadow-lg transition-transform duration-300`}
+            `}
             variants={isMobile ? mobileVariants : desktopVariants}
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.3 }}
             custom={index}
-            viewport={{ once: true }}
+            whileHover={{
+              scale: 1.05,
+              transition: { duration: 0.3, ease:  "easeInOut" },
+            }}
+            viewport={{ once: false }}
             onClick={() => project.liveLink && window.open(project.liveLink, "_blank")}
           >
             {/* Image Container */}
@@ -101,7 +105,7 @@ const Projects = () => {
                   ? { scale: 1.05, opacity: 1 } // Mobile: Scale up
                   : { rotate: index % 2 === 0 ? 5 : -5, opacity: 1 } // Desktop: Rotate
                 }
-                transition={{ duration: 0.3, ease: "easeInOut" }}
+                transition={{ duration: 0.3, ease: "easeIn" }}
               >
                 <Image
                   src={project.image}

@@ -34,12 +34,12 @@ const Sidebar = () => {
               setActiveSectionName(section.id);
               setTimeOfLastClick(Date.now());
             }}
-            className={`hover:bg-slate-400 px-4 py-2 rounded-full cursor-pointer ${activeSectionName === section.id ? "bg-slate-500 rounded-full px-4" : ""
+            className={`hover:bg-slate-500 hover:text-white px-4 py-2 rounded-full cursor-pointer ${activeSectionName === section.id ? "bg-slate-600 text-white rounded-full px-4" : ""
               }`}
           >
             {section.name}
           </motion.a>
-          
+
         ))}
 
         <ThemeToggle />
@@ -75,7 +75,7 @@ const Sidebar = () => {
         <div className="navbar-center">
           <a
             href="#home"
-            className="btn btn-ghost text-xl"
+            className="btn font-luckiest pt-2 btn-ghost text-2xl"
             onClick={() => {
               setActiveSectionName("home");
               setTimeOfLastClick(Date.now());

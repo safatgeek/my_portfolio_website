@@ -9,6 +9,7 @@ const skills = [
   "Node.js", "Express.js", "MongoDB", "Firebase",
   "HTML", "CSS", "Tailwind CSS", "Framer Motion",
   "Prisma", "Zustand", "DaisyUI", "Resend", "Cloudinary",
+  "TanStack Query"
 
 ];
 
@@ -35,7 +36,7 @@ const Skills = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
             {skill}
           </motion.div>

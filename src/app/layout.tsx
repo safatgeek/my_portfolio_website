@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Chewy, Luckiest_Guy } from "next/font/google";
 import "./globals.css";
 import Sidebar from "./components/Sidebar";
 import ClientThemeWrapper from "@/context/ClientThemeWrapper";
@@ -12,6 +12,18 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const chewy = Chewy({
+  variable: "--font-chewy",
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const luckiestGuy = Luckiest_Guy({
+  variable: "--font-luckiest-guy",
+  weight: "400",
   subsets: ["latin"],
 });
 
@@ -28,14 +40,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${chewy.variable} ${luckiestGuy.variable} antialiased`}
       >
         <ThemeProvider>
           <ClientThemeWrapper>
-            <div className="">
+            <div>
               <Sidebar />
               {children}
-
             </div>
           </ClientThemeWrapper>
         </ThemeProvider>

@@ -5,3 +5,7 @@
 html {
     scroll-behavior: smooth;
   }
+
+@theme inline {
+  --font-grotesk: var(--font-bebas-neue)
+}

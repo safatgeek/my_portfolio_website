@@ -23,7 +23,7 @@ export const ThemeProvider = ({children}: any) => {
     }, [])
 
     if (!isMounted) {
-        return <div>Loading...</div>
+        return <div className="flex h-screen w-full justify-center text-center items-center font-luckiest">SAFAT</div>
     }
 
     const changeTheme = (theme: string) => {
