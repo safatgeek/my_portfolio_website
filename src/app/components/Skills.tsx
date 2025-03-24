@@ -19,10 +19,11 @@ const Skills = () => {
   return (
     <motion.div
       ref={ref}
-      className="flex flex-col gap-8 py-24 px-6 md:px-16 md:py-8 items-center justify-between"
+      className="flex flex-col gap-8 items-center justify-between py-24 px-6 md:px-16 md:py-8"
+      id="skills"
     >
       <motion.h2
-        id="skills"
+
         initial={{
           opacity: 0
         }}

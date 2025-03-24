@@ -20,6 +20,13 @@ const projects = [
     liveLink: "",
     use: ["TypeScript", "Next.JS", "Tailwind CSS", "DaisyUI", "Express", "Firebase", "MongoDB", "NodeJS", "Cloudinary"],
   },
+  {
+    title: "Nineteen Club",
+    description: "This is a personal project I built in early 2023 when I was a beginner in development. It was originally created for a reunion of our SSC 2019 batch in my district. I used React and raw CSS. Live link available.",
+    image: "/images/nineteen-club.png",
+    liveLink: "https://nineteen-club.web.app",
+    use: ["React", "CSS", "Firebase"],
+  },
 ];
 
 
